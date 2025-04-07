@@ -8,7 +8,7 @@
   consul agent -dev
   ```
 
-⦁ Once up it can be viewed in URL.[localhost](https://localhost:8500/ui/dc1/services)
+⦁ Once up it can be viewed in URL. [localhost](https://localhost:8500/ui/dc1/services)
 
 ⦁ Add Consul Client Library from Nuget package to your application then configure and Inject it from Program file.
   [ConsulRegistrationService](https://github.com/Yuvaraj-Patil/ApiGetway/blob/main/ProductApi/ProductAPI/ProductAPI/ConsulRegistrationService.cs)
