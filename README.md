@@ -18,6 +18,7 @@
 ⦁ Now we need to configure the Ocelot Getway using the .json file [ocelot.json](https://github.com/Yuvaraj-Patil/ApiGetway/blob/main/ApiGateway/APIGateway/APIGateway/ocelot.json) where we defined the mapping between gateway and APIs.
 
 ⦁ Now in Program.cs file we need to add the below code.
+
   builder.Configuration.AddJsonFile("ocelot.json", reloadOnChange: true, optional: false);
   builder.Services.AddOcelot(builder.Configuration).AddConsul();
   
