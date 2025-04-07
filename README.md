@@ -24,11 +24,7 @@
   
   await app.UseOcelot();
 
-⦁ Once the API Gateway is successfully configured and running, you can utilize tools like Postman to test the microservices via the gateway.
-
-  The integration with Consul's dynamic service discovery ensures that any updates, such as new endpoints or changes in port numbers, are automatically handled.
-  
-  This eliminates the need for manual modifications in the gateway configuration, making the system both flexible and efficient.
+⦁ Once the API Gateway is successfully configured and running, you can utilize tools like Postman to test the microservices via the gateway. The integration with Consul's dynamic service discovery ensures that any updates, such as new endpoints or changes in port numbers, are automatically handled. This eliminates the need for manual modifications in the gateway configuration, making the system both flexible and efficient.
   
 
    
