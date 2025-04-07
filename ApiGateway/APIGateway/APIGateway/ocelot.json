@@ -1,0 +1,56 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/orders/{everything}",
+      "DownstreamScheme": "http",
+      "ServiceName": "order-service",
+      "UpstreamPathTemplate": "/gateway/orders/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ],
+      "ReRoutesCaseSensitive": false
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "http",
+      "ServiceName": "order-service",
+      "UpstreamPathTemplate": "/gateway/orders",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ],
+      "ReRoutesCaseSensitive": false
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/products/{everything}",
+      "DownstreamScheme": "http",
+      "ServiceName": "product-service",
+      "UpstreamPathTemplate": "/gateway/products/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ],
+      "ReRoutesCaseSensitive": false
+
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "ServiceName": "product-service",
+      "UpstreamPathTemplate": "/gateway/products",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ],
+      "ReRoutesCaseSensitive": false
+
+    }
+
+
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Scheme": "http",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+  }
+  
+
